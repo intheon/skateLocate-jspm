@@ -29,7 +29,6 @@
 
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/material.css" />
 	<link rel="stylesheet" href="css/swiper.css" />
 	<link rel="stylesheet" href="css/style.css" />
 
@@ -55,6 +54,15 @@
 			zoom-control="false"
 			street-view-control-options="{position:'RIGHT_TOP'}"
 			zoom-control-options="{position:'RIGHT_TOP'}">
+
+			<!-- This will be dynamically draw ALL EXISTING markers in the allData array -->
+			<marker
+				ng-repeat="marker in main.allData | filter: parks | filter:filterTags"
+				position="{{marker.skateparkLocation}}"
+				title="{{marker.skateparkName}}"
+				id="{{marker._id}}"
+				on-click="showSkateparkDetails(marker)">
+			</marker>
 
 		</ng-map>
 

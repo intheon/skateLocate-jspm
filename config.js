@@ -18,7 +18,8 @@ System.config({
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.6",
-    "materialize": "npm:materialize@1.0.0",
+    "jquery": "npm:jquery@2.2.3",
+    "materialize-css": "npm:materialize-css@0.97.6",
     "ngmap": "github:allenhwkim/angularjs-google-maps@1.17.3",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -47,9 +48,9 @@ System.config({
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:materialize@1.0.0": {
-      "assert": "github:jspm/nodelibs-assert@0.1.0",
-      "util": "github:jspm/nodelibs-util@0.1.0"
+    "npm:materialize-css@0.97.6": {
+      "css": "github:systemjs/plugin-css@0.1.21",
+      "jquery": "github:components/jquery@2.2.1"
     },
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"

@@ -1,3 +1,5 @@
+"use strict";
+
 function MainCtrl(allParksSrv){
 
 	// Initialise array to store response from db
@@ -10,7 +12,8 @@ function MainCtrl(allParksSrv){
 	})
 
 
-
 }
+
+//MainCtrl.$inject = ["allParksSrv"]
 
 export default MainCtrl;

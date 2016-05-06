@@ -3,9 +3,8 @@
 // library imports
 import angular from "angular";
 import ngMap from "ngmap";
-
-import materialize from "materialize";
-
+import $ from "jquery";
+import material from "materialize-css";
 // services
 import allParksSrv from "./services/all-parks.service.js";
 

@@ -17,7 +17,8 @@
   "jspm": {
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.5.5",
-      "materialize": "npm:materialize@^1.0.0",
+      "jquery": "npm:jquery@^2.2.3",
+      "materialize-css": "npm:materialize-css@^0.97.6",
       "ngmap": "github:allenhwkim/angularjs-google-maps@^1.17.3"
     },
     "devDependencies": {

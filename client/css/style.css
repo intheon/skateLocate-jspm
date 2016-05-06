@@ -869,6 +869,18 @@ OVERHAULED
 
 }
 
+.collection-item
+{
+	transition: 1s all;
+}
+
+
+.collection-item:hover
+{
+	background: rgba(0,0,0,0.02);
+	cursor: pointer;
+}
+
 .collection .collection-item.avatar i.circle
 {
 	margin-top:6px !important;

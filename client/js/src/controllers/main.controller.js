@@ -1,11 +1,12 @@
 "use strict";
 
-function MainCtrl(allParksSrv, helpersSrv, stylesSrv){
+function MainCtrl(allParksSrv, helpersSrv, stylesSrv, tagsSrv){
 
 	// Initialise array to store response from db
 	this.allData = [];
 	this.revData = [];
 	this.mapStyles = stylesSrv;
+	this.tags = tagsSrv;
 
 	allParksSrv.success((response) => {
 		this.allData = response;

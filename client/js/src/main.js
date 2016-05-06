@@ -10,6 +10,7 @@ import material from "materialize-css";
 import allParksSrv from "./services/all-parks.service.js";
 import helpersSrv from "./services/helpers.service.js";
 import stylesSrv from "./services/styles.service.js";
+import tagsSrv from "./services/tags.service.js";
 
 
 // controllers
@@ -42,5 +43,6 @@ angular.module("ngSkateApp", ["ngMap"])
 	.directive("searchBar", searchBar)
 	.service("allParksSrv", allParksSrv)
 	.service("helpersSrv", helpersSrv)
+	.service("tagsSrv", tagsSrv)
 	.service("stylesSrv", stylesSrv);
 

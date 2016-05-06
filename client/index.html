@@ -47,7 +47,7 @@
 			class="map"
 			zoom="5"
 			center="48.60385760823255, 18.9404296875"
-			styles="{{ styles }}"
+			styles="{{ main.styles }}"
 			on-click=""
 			trigger-resize
 			map-type-control="false"
@@ -55,14 +55,40 @@
 			street-view-control-options="{position:'RIGHT_TOP'}"
 			zoom-control-options="{position:'RIGHT_TOP'}">
 
-			<!-- This will be dynamically draw ALL EXISTING markers in the allData array -->
-			<marker
-				ng-repeat="marker in main.allData | filter: parks | filter:filterTags"
-				position="{{marker.skateparkLocation}}"
-				title="{{marker.skateparkName}}"
-				id="{{marker._id}}"
-				on-click="showSkateparkDetails(marker)">
-			</marker>
+				<!-- Custom button for top left of the map -->
+				<custom-control
+					id=""
+					position="TOP_LEFT"
+					index="1">
+						<div class="waves-effect white lighten-4 btn-flat toggleControl" ng-click="toggleEditing()">Add | Edit</div>
+				</custom-control>
+
+				<!-- This will be dynamically draw ALL EXISTING markers in the allData array -->
+				<marker
+					ng-repeat="marker in main.allData | filter: parks | filter:filterTags"
+					position="{{marker.skateparkLocation}}"
+					title="{{marker.skateparkName}}"
+					id="{{marker._id}}"
+					on-click="showSkateparkDetails(marker)">
+				</marker>
+
+				<!-- This is the POTENTIAL marker that will appear when the user clicked on the map. it can theoretically go anywhere -->
+				<marker 
+					ng-repeat="marker in main.clickedLocation"
+					position="{{ marker.location }}"
+					title="This is a marker"
+					id="inProgressMarker">
+				</marker>
+
+
+				<!-- InfoWindow for EXISTING markers -->
+				<info-window id="detailsWindow" class="detailsWindow" max-width="1400">
+
+					<existing-skatepark-info></existing-skatepark-info>
+
+				</info-window>
+
+
 
 		</ng-map>
 

@@ -4,7 +4,7 @@ function helpers(){
 
 	let helpers = {};
 
-	helpers.reverse = function(array){
+	helpers.rev = function(array){
 		let copy = [].concat(array);
 		return copy.reverse();
 	}

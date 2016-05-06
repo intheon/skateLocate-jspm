@@ -3,7 +3,7 @@
 
 	<div class="collapsible-body">
 
-		<div ng-repeat="item in rev(main.allData) | orderBy: '-skateparkRating' | limitTo: 4" class="list-of-highest-rated-items collection mouse-clickable ">
+		<div ng-repeat="item in main.allData | orderBy: '-skateparkRating' | limitTo: 4" class="list-of-highest-rated-items collection mouse-clickable ">
 
 			<div class="collection-item avatar" ng-click="showSkateparkDetails(item._id, item)">
 				<span class="absolute-label">{{ item.skateparkRating }}</span><i class=" circle"></i>

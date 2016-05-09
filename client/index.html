@@ -40,7 +40,7 @@
 <body ng-controller="MainCtrl as main">
 
 	<!-- Main Map view -->
-	<div class="left-column">
+	<div class="main-view">
 
 		<!-- Map directive. Uses ng-map (https://ngmap.github.io) -->
 		<ng-map 
@@ -52,8 +52,9 @@
 			trigger-resize
 			map-type-control="false"
 			zoom-control="false"
-			street-view-control-options="{position:'RIGHT_TOP'}"
-			zoom-control-options="{position:'RIGHT_TOP'}">
+			street-view-control-options="{position:'LEFT_BOTTOM'}"
+			zoom-control-options="{position:'RIGHT_TOP'}"
+			ng-controller="MapCtrl as map">
 
 				<!-- Custom button for top left of the map -->
 				<custom-control
@@ -89,12 +90,13 @@
 				</info-window>
 
 
-
 		</ng-map>
 
 	</div>
 
 	<!-- Sidebar view -->
+
+	<div class="right-column-bg"></div>
 	<ul class="collapsible right-column" data-collapsible="accordion">
 
 		<!-- Site header -->

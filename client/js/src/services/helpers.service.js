@@ -9,6 +9,22 @@ function helpers(){
 		return copy.reverse();
 	}
 
+	helpers.createToast = function(string){
+		Materialize.toast(string, 2000) // 2000 is the duration of the toast
+	}
+
+	helpers.toggleEditOn = function(){
+		$(".toggleControl").removeClass("white");
+		$(".toggleControl").addClass("green");
+		$(".toggleControl").text("Stop Editing")
+	}
+
+	helpers.toggleEditOff = function(){
+		$(".toggleControl").removeClass("green");
+		$(".toggleControl").addClass("white");
+		$(".toggleControl").text("ADD | EDIT")
+	}
+
 	return helpers;
 
 }

@@ -15,7 +15,7 @@ import tagsSrv from "./services/tags.service.js";
 
 // controllers
 import MainCtrl from "./controllers/main.controller.js";
-//import MapCtrl from "./controllers/map.controller.js";
+import MapCtrl from "./controllers/map.controller.js";
 
 // directives
 import headerGraphic from "./directives/header.directive.js";
@@ -33,7 +33,7 @@ import searchBar from "./directives/search.directive.js";
 // GO!
 angular.module("ngSkateApp", ["ngMap"])
 	.controller("MainCtrl", MainCtrl)
-	//.controller("MapCtrl", MapCtrl)
+	.controller("MapCtrl", MapCtrl)
 	.directive("headerGraphic", headerGraphic)
 	.directive("highestRankedItems", highestRankedItems)
 	.directive("recentlyAddedItems", recentlyAddedItems)
